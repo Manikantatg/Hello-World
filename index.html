@@ -2,97 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doutly - Empowering Knowledge Sharing</title>
-    <!-- Link to CSS file -->
+    <title>ClariFi</title>
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stlye.css">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
-        <h1>Welcome to Doutly</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="#contact">Contact</a></li>
-             
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo">ClariFi</div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#competitions">Competitions</a>
+                <a href="#mentorship">Mentorship</a>
+                <a href="#about">About Us</a>
+            </nav>
+            <button class="cta-button" onclick="scrollToSection('home')">Join Now</button>
+        </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Home Section -->
-        <section id="home">
-            <h2>Empowering Students and Freelancers</h2>
-            <p>At Doutly, we believe in empowering individuals through knowledge sharing. Whether you're a student seeking guidance or a freelancer looking to share your expertise, Doutly is your go-to platform.</p>
-            <img src="Join Our Community2.webp" alt="Doutly Home Image">
-        </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to ClariFi</h1>
+                <p>Your journey to knowledge, mentorship, and opportunities starts here.</p>
+                <video id="introVideo" src="viedo.mp4" ></video>
+            </div>
+        </div>
+    </section>
 
-        <!-- Features Section -->
-        <section id="features">
-            <h2>Key Features</h2>
-            <div class="features-container">
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Our Unique Features</h2>
+            <div class="feature-grid">
                 <div class="feature-item">
-                    <img src="Interactive Doubt Solving.jpeg" alt="Feature 1">
-                    <h3>Interactive Doubt Solving</h3>
-                    <p>Engage in real-time discussions with experts and peers to solve your academic and career-related doubts.</p>
+                    <img src="Knowledge Sharing1.jpg" alt="Knowledge Sharing">
+                    <h3>Knowledge Sharing</h3>
+                    <p>Engage in peer-to-peer learning and share knowledge effectively.</p>
+                    <button class="cta-button" onclick="scrollToSection('home')">Join Now</button>
                 </div>
                 <div class="feature-item">
-                    <img src="Competitions and Challenges.webp" alt="Feature 2">
-                    <h3>Competitions and Challenges</h3>
-                    <p>Participate in various competitions to test your skills and win exciting prizes while learning and growing.</p>
+                    <img src="Competitions.jpeg" alt="Competitions">
+                    <h3>Competitions</h3>
+                    <p>Participate in exciting challenges to enhance your learning.</p>
+                    <button class="cta-button" onclick="scrollToSection('home')">Join Now</button>
                 </div>
                 <div class="feature-item">
-                    <img src="Mentorship and Guidance.jpg" alt="Feature 3">
-                    <h3>Mentorship and Guidance</h3>
-                    <p>Get personalized mentorship from industry experts and experienced professionals to guide your learning journey.</p>
+                    <img src="Mentorship and Guidance.jpg" alt="Mentorship">
+                    <h3>Mentor Guidance</h3>
+                    <p>Receive personalized mentorship from experienced professionals.</p>
+                    <button class="cta-button" onclick="scrollToSection('home')">Join Now</button>
+                </div>
+                <div class="feature-item">
+                    <img src="job.png" alt="Part-time Jobs">
+                    <h3>Part-time Jobs</h3>
+                    <p>Earn while you learn through tutoring and freelance opportunities.</p>
+                    <button class="cta-button" onclick="scrollToSection('home')">Join Now</button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Community Section -->
-        <section id="community">
-            <h2>Join Our Community</h2>
-            <p>Be a part of a growing community of learners and experts. Share knowledge, ask questions, and build connections.</p>
-            <img src="Join Our Community3.webp" alt="Community Image">
-        </section>
+    <!-- Competitions Section -->
+    <section id="competitions" class="competitions">
+        <div class="container">
+            <h2>Current Competitions</h2>
+            <div class="competitions-grid">
+                <div class="competition-item">
+                    <img src="Compaction1.avif" alt="Competition 1">
+                    <p>Challenge yourself in our latest coding competition!</p>
+                    <button class="cta-button" onclick="scrollToSection('home')">Join Now</button>
+                </div>
+                <div class="competition-item">
+                    <img src="Competitions and Challenges.webp" alt="Competition 2">
+                    <p>Join the quiz competition to test your general knowledge!</p>
+                    <button class="cta-button" onclick="scrollToSection('home')">Join Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>We would love to hear from you! Whether you have a question, feedback, or need support, reach out to us.</p>
-            <form id="contactForm">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-    </main>
+    <!-- Mentorship Section -->
+    <section id="mentorship" class="mentorship">
+        <div class="container">
+            <h2>Mentorship</h2>
+            <p>Our mentors are dedicated to guiding you towards achieving your educational and career goals.</p>
+        </div>
+    </section>
 
-    <!-- Footer Section -->
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>ClariFi is a dynamic platform designed to empower students through collaborative learning, engaging competitions, expert mentorship, and practical earning opportunities.</p>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Doutly. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 ClariFi. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Thank you for reaching out! We will get back to you soon.');
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Video autoplay when scrolling back to home section
+        window.addEventListener('scroll', function() {
+            const introVideo = document.getElementById('introVideo');
+            const homeSection = document.getElementById('home');
+            const homeSectionTop = homeSection.getBoundingClientRect().top;
+
+            if (homeSectionTop >= 0 && homeSectionTop <= window.innerHeight / 2) {
+                introVideo.play();
+            } else {
+                introVideo.play();
+            }
         });
     </script>
 </body>

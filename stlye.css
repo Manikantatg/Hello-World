@@ -1,155 +1,227 @@
-/* General Styles */
+/* Basic reset and font setup */
+body, h1, h2, h3, p, nav, header, section, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f3f7fa;
-    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f4f8;
+}
 
-/* Header Section */
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
 header {
-    background-color: #1a73e8;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+    background: #2c7a7b;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+header .container {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
 
-nav ul li {
-    margin: 0 15px;
+header .logo {
+    font-size: 1.5em;
+    font-weight: 600;
 }
 
-nav ul li a {
-    color: white;
+header nav a {
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
+    margin: 0 10px;
+    font-weight: 600;
 }
 
-nav ul li a:hover {
-    color: #ffb74d;
+header .cta-button {
+    background: #e2f0cb;
+    color: #2c7a7b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-/* Main Content */
-main {
-    padding: 40px 20px;
+header .cta-button:hover {
+    background: #c7e1a6;
 }
 
-section {
-    margin-bottom: 60px;
+/* Hero Section */
+.hero {
+    background: #edf2f7;
+    padding: 0% 0;
     text-align: center;
 }
 
-section h2 {
-    color: #1a73e8;
+.hero-content h1 {
+    font-size: 2.5em;
+    color: #2c7a7b;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.hero-content video {
+    width: 100%;
+    height:3%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Features Section */
+.features {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features h2 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-section p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-}
-
-section img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Features Section */
-.features-container {
+.feature-grid {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .feature-item {
-    max-width: 300px;
-    margin: 20px;
+    background: #edf2f7;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
 }
 
 .feature-item img {
     width: 100%;
-    height: 50%;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    height: auto;
+    border-radius: 10px;
 }
 
 .feature-item h3 {
-    margin-top: 10px;
-    font-size: 1.4em;
-    color: #2e3e4e;
+    color: #2c7a7b;
+    margin: 10px 0;
 }
 
-.feature-item p {
+.cta-button {
+    background: #2c7a7b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
     font-size: 1em;
-    color: #5a6c7a;
 }
 
-/* Contact Form */
-#contactForm {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: left;
+.cta-button:hover {
+    background: #1e5b5f;
 }
 
-#contactForm div {
+/* Competitions Section */
+.competitions {
+    background: #f7fafc;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.competitions h2 {
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
-#contactForm label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+.competitions-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-#contactForm input, #contactForm textarea {
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-#contactForm button {
-    padding: 12px 20px;
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-}
-
-#contactForm button:hover {
-    background-color: #1558b6;
-}
-
-/* Footer Section */
-footer {
-    background-color: #1a3c70;
-    color: white;
+.competition-item {
+    background: #edf2f7;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
     text-align: center;
-    padding: 15px 0;
-    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.competition-item:hover {
+    transform: translateY(-10px);
+}
+
+.competition-item img {
     width: 100%;
-    bottom: 0;
-    font-size: 0.9em;
+    height: auto;
+    border-radius: 10px;
 }
+
+/* Mentorship Section */
+.mentorship {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
 }
+
+.mentorship h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* About Us Section */
+.about {
+    background: #edf2f7;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #2c7a7b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #e2f0cb;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
